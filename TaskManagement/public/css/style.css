@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+:root {
+    --black-color: #212529;
+    --white-color: #ffffff;
+    --red-color: #dc3545;
+    --gray-200-color: #e9ecef;
+    --gray-300-color: #dee2e6;
+    --gray-700-color: #495057;
+    --light-blue-color: #007bff;
+    --light-green-color: #28a745;
+    --light-100-gray-color: #e5e5e5;
+    --light-200-gray-color: #e0e0e0;
+    --lighter-gray-color: #f7f7f7;
+    --dark-green-color: #218838;
+    --off-white-color: #f8f9fa; 
+}
+
+header {
+    background-color: var(--black-color);
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+.left-side svg {
+    margin-right: 15px;
+}
+
+.right-side {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.right-side svg {
+    fill: var(--white-color);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.title {
+    color: var(--gray-300-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    margin-left: 60px;
+    padding: 10px;
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--off-white-color);
+    overflow-y: auto;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content-header h2 {
+    font-size: 24px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white-color);
+    table-layout: fixed; 
+}
+
+.data-table thead {
+    background-color: var(--gray-200-color);
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid var(--gray-300-color);
+    text-align: left;
+}
+
+.data-table th {
+    font-weight: bold;
+}
+
+.description-column {
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify
+}
+
+.actions-column {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edit-button {
+    background-color: var(--light-blue-color);
+    color: var(--white-color);
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    margin-left: 28px;
+}
+
+.delete-button {
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.add-button {
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    background-color: var(--dark-green-color);
+}
+
+footer {
+    background-color: var(--gray-300-color);
+    padding: 25px;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text p {
+    color: var(--gray-700-color);
+    font-size: 15px;
+    margin: 0;
+}
+
+.form-container {
+    max-width: 1450px;
+    margin: 30px 30px 100px 30px;
+    background-color: var(--white-color);
+    padding: 20px;
+    border: 1px solid var(--light-100-gray-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--light-100-gray-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    height: 100px;
+    resize: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--light-green-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-danger {
+    display: block;
+    width: 8%;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-cancel {
+    display: block;
+    width: 8%;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: var(--light-green-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form-container {
+    border: 1px solid var(--light-200-gray-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    background-color: var(--lighter-gray-color);
+    padding: 10px 15px;
+    margin: -20px -20px 20px -20px;
+    border-bottom: 1px solid var(--light-200-gray-color);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.form-container h2::before {
+    font-family: "FontAwesome";
+    margin-right: 10px;
+}
+
+.delete-confirmation {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.delete-confirmation h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.delete-confirmation h5 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.delete-confirmation .btn-danger {
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-confirmation .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.delete-confirmation .btn-cancel {
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button {
+    background-color: transparent;
+    border: none;
+}
